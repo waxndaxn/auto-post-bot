@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+venv/
+.venv/
+
+# Replit
+.upm/
+.config/
+.cache/
+replit_zip_error_log.txt

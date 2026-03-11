@@ -1,0 +1,13 @@
+run = "gunicorn main:app --bind 0.0.0.0:8080 --workers 1 --timeout 120"
+entrypoint = "main.py"
+
+[nix]
+channel = "stable-23_11"
+
+[deployment]
+run = ["sh", "-c", "gunicorn main:app --bind 0.0.0.0:8080 --workers 1 --timeout 120"]
+deploymentTarget = "cloudrun"
+
+[[ports]]
+localPort = 8080
+externalPort = 80
